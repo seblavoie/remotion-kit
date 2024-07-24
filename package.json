@@ -1,0 +1,41 @@
+{
+  "name": "remotion-kit",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "description": "A set of components for remotion",
+  "keywords": [
+    "remotion",
+    "animation",
+    "components"
+  ],
+  "author": "seblavoie",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "tsc -w",
+    "test": "jest",
+    "lint": "eslint src/**/*.{js,ts,tsx}"
+  },
+  "peerDependencies": {
+    "@remotion/cli": "^4.0.177",
+    "@remotion/zod-types": "4.0.177",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remotion/tailwind": "^4.0.178",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "bun-types": "^1.1.17",
+    "eslint": "^8.57.0",
+    "gsap": "^3.12.5",
+    "rollup": "^4.18.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.5.3"
+  }
+}
