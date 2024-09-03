@@ -42,13 +42,16 @@ export const MyComposition = () => {
 
   return (
     <div>
-      <AnimatedElement
-        animationIn={[presets.fadeIn, presets.scaleIn]}
-        animationOut={presets.fadeOut}
-        durationInFrames={durationInFrames}
-      >
-        <img src="my-image.jpg" alt="Animated image" />
-      </AnimatedElement>
+      {/* Animation in and out of an element */}
+      <Sequence from={0} duration={100}>
+        <AnimatedElement
+          animationIn={presets.fadeIn}
+          animationOut={presets.fadeOut}
+          durationInFrames={durationInFrames}
+        >
+          <img src="my-image.jpg" alt="Animated image" />
+        </AnimatedElement>
+      </Sequence>
 
       <AnimatedText
         durationInFrames={durationInFrames}
@@ -68,7 +71,7 @@ export const MyComposition = () => {
 
 ### AnimatedElement
 
-`AnimatedElement` is a wrapper component that applies animations to its children.
+`AnimatedElement` is a wrapper component that applies animations to its content.
 
 #### Props
 
@@ -148,6 +151,8 @@ const style = useAnimation(animations, totalDurationInFrames, isOut);
 ```typescript
 const combinedAnimation = combine(animation1, animation2, animation3);
 ```
+
+Using an array of object will automatically use `combine`.
 
 ### presets
 
