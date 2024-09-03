@@ -1,6 +1,6 @@
 # Remotion Kit
 
-Remotion Kit is a library of small helper components and presets to simplify the animation and prototyping process in Remotion. 
+Remotion Kit is a library of small helper components and presets to simplify the animation and prototyping process in Remotion.
 
 This is an early development version so be warned that there probably will be breaking changes in the future.
 
@@ -151,15 +151,27 @@ const combinedAnimation = combine(animation1, animation2, animation3);
 
 ### presets
 
-`presets` is an object containing pre-defined animations:
+`presets` is an object containing pre-defined animations.
 
-- `fadeIn`
-- `fadeOut`
-- `scaleIn`
-- `scaleOut`
-- `slideIn`
-- `wordFadeIn`
-- `wordFadeOut`
+| Preset        | Property   | From | To  | Duration (frames) | Easing            |
+| ------------- | ---------- | ---- | --- | ----------------- | ----------------- |
+| `fadeIn`      | opacity    | 0    | 1   | 30                | Easing.ease       |
+| `fadeOut`     | opacity    | 1    | 0   | 30                | Easing.ease       |
+| `scaleIn`     | scale      | 0    | 1   | 30                | Easing.elastic(1) |
+| `scaleOut`    | scale      | 1    | 0.5 | 30                | Easing.ease       |
+| `slideIn`     | translateY | 50   | 0   | 30                | Easing.linear     |
+| `wordFadeIn`  | opacity    | 0    | 1   | 30                | Easing.linear     |
+| `wordFadeOut` | opacity    | 1    | 0   | 30                | Easing.linear     |
+
+You can use these presets as starting point and customize them to your needs like so:
+
+```jsx
+const customAnimation = {
+  ...presets.fadeIn,
+  durationInFrames: 60,
+  ease: Easing.elastic(1),
+};
+```
 
 ## Examples
 
@@ -200,6 +212,13 @@ const MyComponent = () => (
 );
 ```
 
+### Roadmap
+
+- [ ] Add more presets
+- [ ] Add more documentation
+- [ ] Add an animatedHtml component
+      This component should both apply aniimations of animatedElement on each html element and animate their text with animatedText.
+
 ## Building and Contributing
 
 To build the project:
@@ -214,4 +233,3 @@ To contribute:
 2. Create a new branch for your feature
 3. Make your changes
 4. Submit a pull request
-
