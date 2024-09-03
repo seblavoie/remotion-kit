@@ -2,6 +2,8 @@
 
 Remotion Kit is a library of small helper components and presets to simplify the animation and prototyping process in Remotion. 
 
+This is an early development version so be warned that there probably will be breaking changes in the future.
+
 ## Table of Contents
 
 1. [Installation](#installation)
@@ -213,8 +215,3 @@ To contribute:
 3. Make your changes
 4. Submit a pull request
 
-Please ensure that your code follows the existing style and includes appropriate tests and documentation.
-
----
-
-For more information and updates, please visit the [Remotion Kit GitHub repository](https://github.com/your-username/remotion-kit).
