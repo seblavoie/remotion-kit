@@ -9,7 +9,7 @@ presets["fadeIn"] = {
   from: 0,
   to: 1,
   durationInFrames: 30,
-  ease: Easing.ease,
+  ease: Easing.linear,
 };
 
 presets["fadeOut"] = {
@@ -17,7 +17,7 @@ presets["fadeOut"] = {
   from: 1,
   to: 0,
   durationInFrames: 30,
-  ease: Easing.ease,
+  ease: Easing.linear,
 };
 
 presets["scaleIn"] = {
@@ -25,7 +25,7 @@ presets["scaleIn"] = {
   from: 0,
   to: 1,
   durationInFrames: 30,
-  ease: Easing.elastic(1),
+  ease: Easing.ease,
 };
 
 presets["scaleOut"] = {
@@ -42,7 +42,7 @@ presets["slideIn"] = {
   to: 0,
   durationInFrames: 30,
   delay: 0,
-  ease: Easing.linear,
+  ease: Easing.ease,
 };
 
 presets["wordFadeIn"] = {
