@@ -158,15 +158,16 @@ Using an array of object will automatically use `combine`.
 
 `presets` is an object containing pre-defined animations.
 
-| Preset        | Property   | From | To  | Duration (frames) | Easing            |
-| ------------- | ---------- | ---- | --- | ----------------- | ----------------- |
-| `fadeIn`      | opacity    | 0    | 1   | 30                | Easing.ease       |
-| `fadeOut`     | opacity    | 1    | 0   | 30                | Easing.ease       |
-| `scaleIn`     | scale      | 0    | 1   | 30                | Easing.elastic(1) |
-| `scaleOut`    | scale      | 1    | 0.5 | 30                | Easing.ease       |
-| `slideIn`     | translateY | 50   | 0   | 30                | Easing.linear     |
-| `wordFadeIn`  | opacity    | 0    | 1   | 30                | Easing.linear     |
-| `wordFadeOut` | opacity    | 1    | 0   | 30                | Easing.linear     |
+| Preset        | Property   | From | To  | Duration (frames) | Easing        |
+| ------------- | ---------- | ---- | --- | ----------------- | ------------- |
+| `fadeIn`      | opacity    | 0    | 1   | 30                | Easing.linear |
+| `fadeOut`     | opacity    | 1    | 0   | 30                | Easing.linear |
+| `scaleIn`     | scale      | 0    | 1   | 30                | Easing.ease   |
+| `scaleOut`    | scale      | 1    | 0.5 | 30                | Easing.ease   |
+| `slideIn`     | translateY | 50   | 0   | 30                | Easing.ease   |
+| `slideOut`    | translateY | 0    | -50 | 30                | Easing.ease   |
+| `wordFadeIn`  | opacity    | 0    | 1   | 30                | Easing.linear |
+| `wordFadeOut` | opacity    | 1    | 0   | 30                | Easing.linear |
 
 You can use these presets as starting point and customize them to your needs like so:
 

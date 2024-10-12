@@ -45,6 +45,15 @@ presets["slideIn"] = {
   ease: Easing.ease,
 };
 
+presets["slideOut"] = {
+  property: "translateY",
+  from: 0,
+  to: -50,
+  durationInFrames: 30,
+  delay: 0,
+  ease: Easing.ease,
+};
+
 presets["wordFadeIn"] = {
   property: "opacity",
   from: 0,
